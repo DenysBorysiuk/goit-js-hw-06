@@ -2,17 +2,15 @@ const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Con
 
 const ingredientsList = document.querySelector('#ingredients');
 
-const makeListItems = items => {
-  return items.map(item => {
-    const listItem = document.createElement('li');
-    listItem.classList.add('item');
-    listItem.textContent = item;
-
-    return listItem;
+const makeElements = options =>
+  options.map(option => {
+    const item = document.createElement('li');
+    item.textContent = option;
+    item.classList.add('item');
+    return item;
   });
-};
 
-const elements = makeListItems(ingredients);
-ingredientsList.append(...elements);
+const elementsList = makeElements(ingredients);
+ingredientsList.append(...elementsList);
 
-// console.log(elements);
+console.log(elementsList);
