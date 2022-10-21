@@ -1,22 +1,16 @@
 const categories = document.querySelector('#categories');
-
-const animalsListTitle = categories.firstElementChild;
-const animalsList = animalsListTitle.lastElementChild;
-
-const roductsListTitle = animalsListTitle.nextElementSibling;
-const productsList = roductsListTitle.lastElementChild;
-
-const techListTitle = categories.lastElementChild;
-const techList = techListTitle.lastElementChild;
+const itemsList = document.querySelectorAll('.item');
 
 console.log(`
 Number of categories: ${categories.children.length}
 
-Category: ${animalsListTitle.childNodes[1].textContent}
-Elements: ${animalsList.children.length}
+Category: ${itemsList[0].firstElementChild.textContent}
+Elements: ${itemsList[0].lastElementChild.children.length}
 
-Category: ${roductsListTitle.childNodes[1].textContent}
-Elements: ${productsList.children.length}
+Category: ${itemsList[1].firstElementChild.textContent}
+Elements: ${itemsList[1].lastElementChild.children.length}
 
-Category: ${techListTitle.childNodes[1].textContent}
-Elements: ${techList.children.length}`);
+Category: ${itemsList[2].firstElementChild.textContent}
+Elements: ${itemsList[2].lastElementChild.children.length}
+
+`);
