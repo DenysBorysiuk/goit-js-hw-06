@@ -1,6 +1,7 @@
 const form = document.querySelector('.login-form');
+form.addEventListener('submit', onFormSubmit);
 
-const onFormSubmit = function () {
+function onFormSubmit(evt) {
   event.preventDefault();
 
   console.log(form.elements.email.value);
@@ -9,9 +10,7 @@ const onFormSubmit = function () {
   if (!form.elements.email.value.length & !form.elements.password.value.length) {
     alert('Все поля должны быть заполнены');
   }
-};
-
-form.addEventListener('submit', onFormSubmit);
+}
 
 // Обработка отправки формы form.login-form должна быть по событию submit.
 // При отправке формы страница не должна перезагружаться.
