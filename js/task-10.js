@@ -12,7 +12,7 @@ btnDestroyRefs.addEventListener('click', onDestroyBoxes);
 
 function onDestroyBoxes() {
   boxesRefs.innerHTML = '';
-  controlsRefs.firstElementChild.value = '';
+  // controlsRefs.firstElementChild.value = '';
 }
 
 function onGetAmount() {
