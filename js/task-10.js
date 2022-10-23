@@ -16,7 +16,13 @@ function onDestroyBoxes() {
 }
 
 function onGetAmount() {
-  createBoxes(controlsRefs.firstElementChild.value);
+  const { value, max, min } = controlsRefs.firstElementChild;
+
+  if (Number(value) >= Number(min) && Number(value) <= Number(max)) {
+    createBoxes(value);
+  } else {
+    alert('Значение должно быть от 1 до 100');
+  }
 }
 
 function createBoxes(amount) {
@@ -30,12 +36,3 @@ function createBoxes(amount) {
   }
   boxesRefs.append(...arr);
 }
-
-// Создай функцию createBoxes(amount), которая принимает один параметр - число.Функция создает столько < div >,
-//   сколько
-// указано в amount и добавляет их в div#boxes.
-
-// Размеры самого первого <div> - 30px на 30px.
-// Каждый элемент после первого, должен быть шире и выше предыдущего на 10px.
-// Все элементы должены иметь случайный цвет фона в формате HEX.
-// Используй готовую функцию getRandomHexColor для получения цвета.
