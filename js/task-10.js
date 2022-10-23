@@ -16,13 +16,7 @@ function onDestroyBoxes() {
 }
 
 function onGetAmount() {
-  const { value, max, min } = controlsRefs.firstElementChild;
-
-  if (Number(value) >= Number(min) && Number(value) <= Number(max)) {
-    createBoxes(value);
-  } else {
-    alert('Значение должно быть от 1 до 100');
-  }
+  createBoxes(controlsRefs.firstElementChild.value);
 }
 
 function createBoxes(amount) {
