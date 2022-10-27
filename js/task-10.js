@@ -13,6 +13,7 @@ btnDestroyRefs.addEventListener('click', onDestroyBoxes);
 
 function onDestroyBoxes() {
   boxesRefs.innerHTML = '';
+  l = 30;
 }
 
 function onGetAmount() {
