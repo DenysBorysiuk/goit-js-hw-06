@@ -11,11 +11,6 @@ let l = 30;
 btnCreateRefs.addEventListener('click', onGetAmount);
 btnDestroyRefs.addEventListener('click', onDestroyBoxes);
 
-function onDestroyBoxes() {
-  boxesRefs.innerHTML = '';
-  l = 30;
-}
-
 function onGetAmount() {
   createBoxes(controlsRefs.firstElementChild.value);
 }
@@ -31,4 +26,9 @@ function createBoxes(amount) {
     arr.push(item);
   }
   boxesRefs.append(...arr);
+}
+
+function onDestroyBoxes() {
+  boxesRefs.innerHTML = '';
+  l = 30;
 }
